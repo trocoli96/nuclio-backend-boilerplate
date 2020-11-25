@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 //Default mongoose connection
     const mongoDB = () => {
         if(process.env.NODE_ENV === 'production'){
-            return `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@playground-bb-mongodb.rz1xw.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+            return `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.gjw9t.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
         }
         if(process.env.NODE_ENV === 'development'){
             return process.env.MONGO_URL
